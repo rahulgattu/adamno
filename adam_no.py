@@ -5,7 +5,19 @@ def reverseDigits(num) :
         num /= 10
           
     return rev 
-  
+ def checkAdamNumber(num) : 
+      
+    # Square first number and square 
+    # reverse digits of second number  
+    a = square(num) 
+    b = square(reverseDigits(num)) 
+          
+    # If reverse of b equals a then given 
+    # number is Adam number 
+    if (a == reverseDigits(b)) : 
+        return True
+    else : 
+        return False 
 # To square number 
 def square(num) : 
     return (num * num) 
@@ -15,9 +27,7 @@ def checkAdamNumber(num) :
       
     # Square first number and square 
     # reverse digits of second number  
-    a = square(num) 
-    b = square(reverseDigits(num)) 
-          
+   
     # If reverse of b equals a then given 
     # number is Adam number 
     if (a == reverseDigits(b)) : 
